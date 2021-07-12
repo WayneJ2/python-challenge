@@ -1,0 +1,10 @@
+"Finacial Analysis"
+--------------------
+"Total Months: " 86
+"Total: $" 38,382,578
+"Average Change: $" -2,315.12
+"Greatest Increase in Profits: $" 1,926,159 Feb-2012
+"Greatest Decrease in Profits: $" -2,196,167 Sep-2013
+--------------------
+Total Months,Total Profit,Average Change,Increase Month,Greatest Increase in Profits,Decrease Month,Greatest Decrease in Profits
+"([86, 38382578, -2315.12, 'Feb-2012', 1926159, 'Sep-2013', -2196167],)"
