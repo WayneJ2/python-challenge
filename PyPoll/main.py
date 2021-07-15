@@ -7,15 +7,21 @@ candidateDict = {}
 
 csvpath = os.path.join('.', 'Resources','election_data.csv')
 
-def percentages(candidate): #, numVotes, percentVotes):
+def percentages(candidate):
     name = str(candidate)
     votes = int(candidateDict[candidate])
     fVotes = "{:,}".format(votes)
     percentVote = "{:.3%}".format(votes/totalVoters)
     print(f"{name}: {percentVote} ({fVotes})")
-   
-          
-          
+
+def percentagesExp(candidate): 
+    name = str(candidate)
+    votes = int(candidateDict[candidate])
+    fVotes = "{:,}".format(votes)
+    percentVote = "{:.3%}".format(votes/totalVoters)
+    return(f"{name}: {percentVote} ({fVotes})")
+    
+    
 with open(csvpath) as voterfile:
     csvreader = csv.reader(voterfile, delimiter=',')
     csvheader = next(csvreader)  
@@ -73,10 +79,8 @@ with open(csvpath) as voterfile:
         csvwriter.writerow(['-------------------------------'] )
         csvwriter.writerow([f'Total Votes:  {ftotalVoters}'])
         csvwriter.writerow(['-------------------------------'])
-#         for row in candidateOptions:
-#             percentages(row)
+        for row in candidateOptions:
+            csvwriter.writerow([percentagesExp(row)])
         csvwriter.writerow(['-------------------------------'])
         csvwriter.writerow([f'Winner:  {winner}'])
         csvwriter.writerow(['-------------------------------'])
-  
-    
